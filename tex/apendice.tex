@@ -1,9 +1,12 @@
 \section{Ejemplos del lenguaje de marcado Latex}
 
 Ejemplos de citas: el libro \textit{The \LaTeX\ Companion}
-\cite{latexcompanion}, un paper de Einstein \cite{einstein},
-y la página de la ETSE sobre TFMs \cite{ETSE:online}\footnote{Esto está tomado de
+\cite{latexcompanion}, un paper de Einstein \cite{einstein}, dos informes técnicos de relevancia \cite{NIST:Cloud-2011,OWASP:Top10-2017} y la página de la ETSE sobre TFMs \cite{ETSE:online}\footnote{Esto está tomado de
 \url{https://www.overleaf.com/learn/latex/Bibliography_management_with_bibtex}}.
+
+Ejemplo de uso de acrónimos en sigular \gls{tfm} y en plural \glspl{tfm}.
+
+Ejemplo de uso de un término de glosario como es \gls{backend}.
 
 
   \textbf{Texto} en el párrafo 1.
@@ -74,13 +77,13 @@ A continuación se muestra una ecuación:
 
   Para generar el fichero PDF:
 
-  \begin{lstlisting}{language=bash}
+  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con pdflatex}]
     pdflatex ejemplo-memoria.tex
     bibtex ejemplo-memoria
     pdflatex ejemplo-memoria.tex
 \end{lstlisting}
 
   También se puede usar \texttt{latexmk} que automáticamente regenera la bibliografía.
-  \begin{lstlisting}{language=bash}
+  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con latexmk}]
     latexmk -pdf ejemplo-memoria.tex
 \end{lstlisting}

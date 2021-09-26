@@ -244,7 +244,7 @@ pdfauthor=\@author}
 
    \vspace*{1cm}
 
-   Yo, \@author, declaro la autoría del Trabajo Fin de Máster titulado ``\@title{}'' y que el citado trabajo no infringe las leyes en vigor sobre propiedad intelectual. El material no original que figura en este trabajo ha sido atribuido a sus legítimos autores.
+   Yo, \@author, declaro la autoría del \Gls{tfm} titulado ``\@title{}'' y que el citado trabajo no infringe las leyes en vigor sobre propiedad intelectual. El material no original que figura en este trabajo ha sido atribuido a sus legítimos autores.
 
    \vspace*{1cm}
 
