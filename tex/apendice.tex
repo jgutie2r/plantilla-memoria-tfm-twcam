@@ -35,7 +35,7 @@ A continuación se muestra una ecuación:
 
   Podemos incluir imágenes en formato: png, pdf o jpg.
 
-  En la figura~\ref{fig:diagrama} se muestra un diagrama realizado con \href{yed}{https://www.yworks.com/products/yed}:
+  En la Figura~\ref{fig:diagrama} se muestra un diagrama realizado con \href{yed}{https://www.yworks.com/products/yed}:
 
   \begin{figure}[!htb]
     \includegraphics[width=0.8\textwidth]{diagrama.pdf}
@@ -55,18 +55,23 @@ A continuación se muestra una ecuación:
     \includegraphics[width=0.4\textwidth]{diagrama.pdf} &  \includegraphics[width=0.4\textwidth]{diagrama.pdf}
   \end{tabular}
 
-  Este es un ejemplo de una tabla:
+  La Tabla \ref{tbl:ejemplo} muestra un ejemplo.
 
+\begin{table}[h!tb]
+  \caption{Ejemplo de tabla \label{tbl:ejemplo}}
   \begin{tabular}{|l|c|}
     \hline
     Columna 1 & Columna 2 \\ \hline
     1 & 2 \\ \hline
   \end{tabular}
+\end{table}
 
 
   \vspace*{1cm}
-  O la misma tabla centrada:
+  Mientras que la Tabla \ref{tbl:centrada} muestra la misma tabla centrada. 
 
+  \begin{table}[h!tb]
+  \caption{Ejemplo de tabla centrada \label{tbl:centrada}}
   \begin{center}
     \begin{tabular}{|l|c|}
       \hline
@@ -74,16 +79,19 @@ A continuación se muestra una ecuación:
       1 & 2 \\ \hline
     \end{tabular}
   \end{center}
+  
+\end{table}
 
-  Para generar el fichero PDF:
+  Para generar el fichero PDF podemos usar los comandos que muestra el Listao \ref{lst:cmds}.
 
-  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con pdflatex}]
+  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con pdflatex},label={lst:cmds}]
     pdflatex ejemplo-memoria.tex
     bibtex ejemplo-memoria
     pdflatex ejemplo-memoria.tex
 \end{lstlisting}
 
-  También se puede usar \texttt{latexmk} que automáticamente regenera la bibliografía.
-  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con latexmk}]
+  También se puede usar \texttt{latexmk} que automáticamente regenera la bibliografía, tal y como muestra el Listado \ref{lst:latexmk}.
+
+  \begin{lstlisting}[language=bash,caption={Comandos para generar PDF con latexmk},label={lst:latexmk}]
     latexmk -pdf ejemplo-memoria.tex
 \end{lstlisting}
